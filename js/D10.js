@@ -535,8 +535,6 @@ let add = () => {
   let ul = document.querySelector('#myList');
   let li = document.createElement('li');
   ul.appendChild(li)
-  let text = li.innerText='TESTO CREATO CON JAVASCRIPT'
-  ul.appendChild(text)
 }
 
 add()
@@ -545,15 +543,27 @@ add()
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
-let removeli = () => {
-let li = document.querySelector('li')
-li.remove()
+function removeListItem() {
+  let li = document.querySelector("li")
+  li.remove()
 }
+removeListItem()
 
-removeli()
+//non so il perchè ma non mi funziona
+
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+
+function addclass() {
+  let tr = document.querySelectorAll("tr")
+  tr.forEach(riga => {
+    riga.setAttribute("class", "test")
+  });
+  console.dir(tr);
+}
+addclass()
+
 
 // [EXTRA] JS Avanzato
 
